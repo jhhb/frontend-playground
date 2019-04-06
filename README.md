@@ -7,9 +7,10 @@
 A basic boilerplate to avoid 30m of setup time when I want to test something.
 
 Includes
+* React
 * Sass
 * Typescript
-
+* Blueprint
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
