@@ -1,3 +1,16 @@
+# Dependencies
+* `node 11.9.0`
+* `npm 6.5.0`
+
+# About
+
+A basic boilerplate to avoid 30m of setup time when I want to test something.
+
+Includes
+* Sass
+* Typescript
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
