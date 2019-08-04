@@ -12,8 +12,12 @@ Includes
 * Typescript
 * Blueprint
 * D3 v3
+* Lodash 4
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# Setup
+`git clone git@github.com:jhhb/frontend-playground.git && cd frontend-playground && yarn install && yarn start`
 
 ## Available Scripts
 
