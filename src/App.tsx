@@ -17,12 +17,6 @@ export class App extends Component {
     this.runD3();
   }
 
-  runLodash(): string {
-    const dumbInterfaces: DumbInterface[] = [{key: 'lodash'}, {key: 'works'}]
-    const dict: Dictionary<DumbInterface[]> = _.groupBy(dumbInterfaces, 'key')
-    return Object.keys(dict).join(' ');
-  }
-
   runD3() {
     if (this.node) {
       d3
@@ -38,20 +32,34 @@ export class App extends Component {
   render() {
     return (
       <div className="App">
-        <Button text="Blueprint works."/>
         <svg ref={node => this.node = node}/>
-        <div>{this.runLodash()}</div>
+        <BlueprintWrapper/>
+        <LodashWrapper/>
         <RouterWrapper/>
       </div>
     );
   }
 }
 
+const BlueprintWrapper = () => {
+  return <Button text="Blueprint works."/>;
+};
+
+const LodashWrapper = () => {
+  const dumbInterfaces: DumbInterface[] = [{key: 'lodash'}, {key: 'works'}]
+  const dict: Dictionary<DumbInterface[]> = _.groupBy(dumbInterfaces, 'key')
+  return (
+    <div>
+      {Object.keys(dict).join(' ')}
+    </div>
+  );
+};
+
 const RouterWrapper = () => {
   return (
     <Router>
-      <Link to="/about">About</Link>
-      <Link to="/home">Home</Link>
+      <Link to="/works">Router</Link>
+      <Link to="/router">Works</Link>
     </Router>
   );
 };
