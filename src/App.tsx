@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Button} from '@blueprintjs/core';
 import * as d3 from 'd3';
 import * as _ from 'lodash';
-
+import {BrowserRouter as Router, Link} from 'react-router-dom';
 import './App.scss';
 import {Dictionary} from 'lodash';
 
@@ -41,7 +41,17 @@ export class App extends Component {
         <Button text="Blueprint works."/>
         <svg ref={node => this.node = node}/>
         <div>{this.runLodash()}</div>
+        <RouterWrapper/>
       </div>
     );
   }
 }
+
+const RouterWrapper = () => {
+  return (
+    <Router>
+      <Link to="/about">About</Link>
+      <Link to="/home">Home</Link>
+    </Router>
+  );
+};
